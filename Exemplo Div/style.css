@@ -1,0 +1,88 @@
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1c1c1c;
+  color: #ffffff;
+  min-height: 2000px;
+}
+div {
+  width: 400px;
+  height: 200px;
+  text-transform: uppercase;
+  background: #1c1c1c;
+}
+div:nth-child(n + 2) {
+  border: 1px solid white;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  background: #1c1c1c;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: glow 4s linear infinite;
+  box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3),
+    10px 10px 20px rgba(255, 255, 255, 0.6),
+    -10px -10px 10px rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  text-shadow: ;
+}
+@keyframes glow {
+  0% {
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3),
+      10px 10px 20px rgba(255, 255, 255, 0.6),
+      -10px -10px 10px rgba(255, 255, 255, 0.1);
+  }
+  25% {
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3),
+      -10px 10px 20px rgba(255, 255, 255, 0.6),
+      -10px -10px 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3),
+      -10px -10px 20px rgba(255, 255, 255, 0.6),
+      -10px 10px 10px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3),
+      10px -10px 20px rgba(255, 255, 255, 0.6),
+      10px -10px 10px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+  }
+}
+
+.sticky {
+  position: sticky;
+  margin: 0 auto;
+  margin-top: 100px;
+  top: 10px;
+}
+.absolute {
+  position: absolute;
+  top: 500px;
+  left: 100px;
+}
+.relative {
+  position: relative;
+  top: 100px;
+  left: 50%;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
