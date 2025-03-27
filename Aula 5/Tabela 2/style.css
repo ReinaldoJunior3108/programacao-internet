@@ -28,8 +28,23 @@ table td {
   padding: 5px;
   text-align: center;
 }
+table th:nth-child(4) {
+  padding: 8px;
+}
+table th:nth-child(3) {
+  padding: 8px;
+}
+table th:nth-child(5) {
+  padding: 8px;
+}
+table th:nth-child(6) {
+  padding: 8px;
+}
+table th:nth-child(n + 7) {
+  padding: 2px;
+}
 table tr {
-  border: 1px solid #999999;
+  border: 1px solid #dddddd;
 }
 table tr:nth-child(16) {
   border-bottom: 2px solid #999999;
