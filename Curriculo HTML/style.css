@@ -1,0 +1,252 @@
+body{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 25%, #04619f 74%);
+    background-repeat: no-repeat;
+    background-size: 150% 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.pfp{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url("pfp.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: absolute;
+    
+}
+.pfp::after, .pfp::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), red, yellow, rgb(0, 255, 0), rgb(0, 229, 255), rgb(255, 0, 255), red);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+    padding: 1px;
+    animation: 5s spin linear infinite;
+}
+.pfp::before{
+    filter: blur(10px);
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+html{
+    color: white;
+    height: 100%;
+    margin: 0;
+}
+.container{
+    display: flex; 
+    justify-content: center;
+    
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 70%;
+    z-index:-2;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    
+}
+.personal-info {
+    top: 0;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container_tab{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 16px black;
+    border-radius: 20px;
+    background-color: #464545;
+    position: relative;
+    }
+.container_tab::after, .container_tab::before{
+    content: '';
+    position: absolute;
+    height: 101%;
+    width: 101%;
+    border-radius: 20px;
+    background-image: conic-gradient(from var(--angle), red, yellow, rgb(0, 255, 0), rgb(0, 229, 255), rgb(255, 0, 255), red);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 1px;
+    animation: 5s spin linear infinite;
+}
+.container_tab::before{
+    filter: blur(10px);
+}
+
+    .tab_btn:hover{
+        transform: scale(1.05);
+    } 
+        
+.tab_box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    
+    
+}
+.tab_box{
+    border-bottom: 1px solid white;
+}
+.tab_box, .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: none;
+    border:none;
+    padding: 18px;
+    
+}
+.tab_box .tab_btn.active{
+   
+    transition: transform 0.3s ease-in-out;
+    background: transparent;
+    
+    
+    
+}
+.tab_box button{
+    background-color: #202020;
+    border: none;
+    border-radius: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.tab_box button::after, .tab_box button::before{
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 102%;
+    border-radius: 1000px;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right , #008cff, #e100ff);
+}
+.tab_box button:hover{
+    box-shadow:  40px 0px 100px #008cff;
+}
+.content_box{
+    max-width: 748px;
+    padding: 10px;
+    word-wrap: break-word;
+    border-top: 1px solid white;
+}
+.content_box .content{
+    display: none;
+}
+.content{
+    max-width: 343px;
+    word-wrap: break-word;
+
+}
+.content_box .content.active{
+    display: block;
+}
+.content_box h2{
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #00ff1e;
+}
+
+@media screen and (max-width: 768px){
+    .box{
+        width: 100%;
+        border-radius: 0;
+    }
+    .tab_box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        text-align: center;
+        z-index:1;
+    }
+    .tab_box .tab_btn{
+        width: 100%;
+        text-align: center;
+    }
+    .line{
+        background: none;
+    }
+    .content_box{
+        padding: 10px;
+        text-align: center;
+    }
+    .content_box h2{
+        font-size: 20px;
+    }
+       
+}
+@media screen and (max-width: 480px){
+    .tab_box .tab_btn{
+        padding: 10px;
+    }
+    .content_box h2{
+        font-size: 18px;
+    }
+    .content_box p{
+        font-size: 14px;
+        
+    }
+    
+    
+}

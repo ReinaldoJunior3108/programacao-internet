@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Curriculo</title>
+  </head>
+  <body>
+    <div class="header finisher-header">
+      <div class="corpo">
+        <div class="container">
+          <div class="box">
+            <div class="personal-info">
+              <div class="pfp"></div>
+            </div>
+            <div class="container_tab">
+              <div class="tab_box">
+                <button class="tab_btn">Informações Pessoais</button>
+                <button class="tab_btn">Formação Academica</button>
+                <button class="tab_btn">Experiencia</button>
+                <button class="tab_btn">Sobre Mim</button>
+              </div>
+              <div class="content_box">
+                <div class="content">
+                  <br />
+                  <h2>Informações Pessoais</h2>
+                  <br />
+                  <p>Nome: Reinaldo Junior</p>
+                  <br />
+                  <p>Idade: 20 anos</p>
+                  <br />
+                  <p>
+                    Endereço: <br />
+                    85900190 - Rua Guarani 1394 Ap201
+                  </p>
+                  <br />
+                  <p>
+                    Telefone:
+                    <a href="https://wa.me/5545998502850" target="_blank"
+                      ><i class="fa fa-whatsapp"></i> (45)99850-2850</a
+                    >
+                  </p>
+                  <br />
+                  <p>
+                    Email:<a href="mailto:reilaldopagno@gmail.com">
+                      reilaldopagno@gmail.com</a
+                    >
+                  </p>
+                </div>
+                <div class="content">
+                  <br />
+                  <h2>Formação Academica</h2>
+
+                  <br />
+                  <p>Conclusão do Ensino Medio (Premen Toledo) - 2023</p>
+                  <br />
+                  <p>
+                    Curso Superior de Analise e Desenvolvimento de
+                    Sistemas(UNIPAR - TOLEDO) - Cursando 1 Periodo
+                  </p>
+                </div>
+                <div class="content">
+                  <br />
+                  <h2>Experiencia</h2>
+                  <br />
+                  <p>
+                    Tecnico em Informatica - Celulares e Computadores<br />RJK
+                    SHOP 2019 - Atual
+                  </p>
+                </div>
+                <div class="content">
+                  <br />
+                  <h2>Sobre Mim</h2>
+                  <p>
+                    Sou um profissional dedicado e prestativo, com vasta
+                    experiência em conserto e manutenção de celulares,
+                    especialmente na área de dispositivos <b>Apple</b>. Ao longo
+                    dos anos, adquiri conhecimento prático e teórico em diversos
+                    cursos especializados, o que me permitiu desenvolver uma
+                    expertise em reparos e otimização de aparelhos da marca.
+                  </p>
+                  <br />
+                  <p>
+                    Minha experiência técnica me proporcionou uma base sólida,
+                    mas sempre busco me atualizar e expandir minhas habilidades.
+                    Atualmente, estou focado no Curso de<i
+                      ><abbr
+                        title="Curso de Análise e Desenvolvimento de Sistemas"
+                      >
+                        ADS</abbr
+                      ></i
+                    >
+                    , com o objetivo de me especializar no desenvolvimento de
+                    softwares multiplataformas. Tenho como objetivo integrar
+                    sistemas eficientes que funcionem de maneira otimizada em
+                    plataformas como iOS, macOS, Windows e Android.
+                  </p>
+                  <br />
+                  <p>
+                    Combinando minha experiência prática com o conhecimento
+                    adquirido no curso de
+                    <abbr title="Analise e Desenvolvimento de Sistemas"
+                      >ADS</abbr
+                    >, estou cada vez mais preparado para criar soluções
+                    tecnológicas inovadoras, sempre com foco em qualidade e em
+                    atender as necessidades dos usuários de maneira eficaz.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add this line to close the header div -->
+    </div>
+    <script>
+      const tabs = document.querySelectorAll(".tab_btn");
+      const all_content = document.querySelectorAll(".content");
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", (e) => {
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
+
+          all_content.forEach((content) => {
+            content.classList.remove("active");
+          });
+          all_content[index].classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
