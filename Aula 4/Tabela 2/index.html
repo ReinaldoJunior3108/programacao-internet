@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 4 Tabela 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      td,
+      th {
+        text-align: center;
+        padding: 10px;
+        border: 2px solid black;
+      }
+      table {
+        border-collapse: collapse;
+        border: 3px solid black;
+        width: 100%;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TABELA DE HORARIOS</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>DIA</th>
+          <th>I</th>
+          <th>II</th>
+          <th>III</th>
+          <th>12:00-12:40</th>
+          <th>IV</th>
+          <th>V</th>
+          <th>VI</th>
+          <th>VII</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SEGUNDA</td>
+          <td>ING</td>
+          <td>MAT</td>
+          <td>QUI</td>
+          <td rowspan="6">
+            L <br />
+            U <br />
+            N <br />
+            C <br />
+            H
+          </td>
+          <td colspan="3">LAB</td>
+          <td>PLAY</td>
+        </tr>
+        <tr>
+          <td>TERÇA</td>
+          <td colspan="3">LAB</td>
+          <td>ING</td>
+          <td>QUI</td>
+          <td>MAT</td>
+          <td>SPORTS</td>
+        </tr>
+        <tr>
+          <td>QUARTA</td>
+          <td>MAT</td>
+          <td>PLAY</td>
+          <td>ING</td>
+          <td>QUI</td>
+          <td colspan="3">BIBLIOTECA</td>
+        </tr>
+        <tr>
+          <td>QUINTA</td>
+          <td>PLAY</td>
+          <td>ING</td>
+          <td>QUI</td>
+          <td colspan="3">LAB</td>
+          <td>MAT</td>
+        </tr>
+        <tr>
+          <td>SEXTA</td>
+          <td colspan="3">LAB</td>
+          <td>MAT</td>
+          <td>QUI</td>
+          <td>ING</td>
+          <td>PLAY</td>
+        </tr>
+        <tr>
+          <td>SABADO</td>
+          <td>ING</td>
+          <td>QUI</td>
+          <td>MAT</td>
+          <td colspan="3">SEMINARIO</td>
+          <td>SPORTS</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 4 Tabela 3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      td,
+      th {
+        padding: 2px;
+        text-align: left;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" width="50%">
+      <thead>
+        <tr>
+          <th colspan="2"><p>Invoice #123456789</p></th>
+          <th colspan="2"><p>14 January 2025</p></th>
+          <th colspan="2"><p>NUM</p></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <p>
+              <b>Pay to:</b> <br />
+              Acme Billing Co. <br />
+              Cityville, NA 12345
+            </p>
+          </td>
+          <td colspan="2">
+            <b>Customer:</b> <br />
+            John Smith <br />
+            321 Willow Way <br />
+            Southeast Northwestershire, MA 54321
+          </td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><p>"Name"/Description</p></td>
+          <td>1</td>
+          <td>@</td>
+          <td>Cost</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Paperclips</td>
+          <td>1000</td>
+          <td>0.01</td>
+          <td>10.00</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Staples(box)</td>
+          <td>100</td>
+          <td>1.00</td>
+          <td>100.00</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td colspan="2">Subtotal</td>
+          <td colspan="2">110.00</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td colspan="2">Tax</td>
+          <td>8%</td>
+          <td>8.80</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td colspan="2">Grand Total</td>
+          <td colspan="2">$118.80</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td colspan="2">02-Mar-20</td>
+          <td colspan="2">April, 2020</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td rowspan="3">1</td>
+          <td>2</td>
+          <td>3</td>
+          <td rowspan="3">4</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td rowspan="2">2</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td colspan="4">1</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
