@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-url: url(./assets/f1car.jpg);
+  --main-color: rgb(180, 0, 0);
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000000;
+  color: #fff;
+}
+.hero__container {
+  width: 100%;
+  height:100%;
+  min-height: -webkit-fill-available; /* Fallback for Safari */
+  
+}
+.hero__background {
+  width: 100%;
+  background: #000000 var(--bg-url) top center/cover;
+  height: 100vh
+}
+.hero__content {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+  width: 100%;
+  height:100%;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  text-align: right;
+}
+.navbar a {
+  text-decoration: none;
+  color: #dcdcdc;
+  font-weight: 300;
+  margin-left: 4rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.navbar a:hover {
+  border-bottom: 2px solid var(--main-color);
+}
+.hero__fialogo {
+  width: 150px;
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+.hero__fialogo svg {
+  fill: #fff;
+  opacity: 0.5;
+}
+.hero__text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  text-align: center;
+}
