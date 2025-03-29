@@ -13,22 +13,38 @@ html {
 body {
   background: #000000;
   color: #fff;
+  filter: grayscale(100);
+  animation: greyscale 5s forwards;
+}
+@keyframes greyscale {
+  0% {
+  }
+
+  50% {
+    filter: grayscale(100);
+  }
+  100% {
+    filter: none;
+  }
 }
 .hero__container {
   width: 100%;
-  height:100%;
+  height: 100%;
   min-height: -webkit-fill-available; /* Fallback for Safari */
-  
+  position: relative;
 }
 .hero__background {
   width: 100%;
   background: #000000 var(--bg-url) top center/cover;
-  height: 100vh
+  height: 100vh;
 }
 .hero__content {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
   width: 100%;
-  height:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar {
   position: absolute;
@@ -46,25 +62,101 @@ body {
   font-weight: 300;
   margin-left: 4rem;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
 }
 .navbar a:hover {
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
 }
 .hero__fialogo {
   width: 150px;
-  position: relative;
+  position: absolute;
   top: 100px;
   left: 50px;
+  animation: fromtop 3s ease;
 }
+.hero__f1logo {
+  min-width: 150px;
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  animation: fromtop 3s ease;
+}
+@keyframes fromtop {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+  }
+}
+
 .hero__fialogo svg {
   fill: #fff;
   opacity: 0.5;
 }
-.hero__text{
+.hero__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  letter-spacing: 16px;
+  animation: opacity 6s ease;
+  word-spacing: 8px;
+}
+.hero-title p {
+  letter-spacing: 8px;
+}
+.hero__text {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: normal;
+}
+@keyframes opacity {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Section */
+
+table {
+  border-collapse: collapse;
+}
+thead th,
+tbody td {
+  padding: 12px 16px;
+}
+tbody td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.table__etapa {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  width: 30%;
+}
+.section__title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+.table__etapas {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px 40px;
+}
+.table__etapas table td:nth-child(1) {
+  width: 10%;
   text-align: center;
 }
