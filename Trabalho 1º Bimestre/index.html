@@ -15,20 +15,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="">Inicio</a>
-        <a href="">Etapas</a>
-        <a href="">Classificação Pilotos</a>
-        <a href="">Classificação Equipes</a>
-        <a href="">Sistema de Pontuação</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#etapas">Etapas</a>
+        <a href="#class">Classificação Pilotos</a>
+        <a href="#equipes">Classificação Equipes</a>
+        <a href="#sistemapts">Sistema de Pontuação</a>
       </nav>
     </header>
     <main>
       <!-- Inicio -->
-      <section>
+      <section id="inicio">
         <div class="hero__container">
           <div class="hero__background">
             <div class="hero__content">
@@ -88,7 +92,7 @@
       </section>
 
       <!-- Etapas -->
-      <section>
+      <section id="etapas">
         <div class="section__title">
           <h1>ETAPAS</h1>
         </div>
@@ -97,70 +101,75 @@
             <table>
               <thead>
                 <tr>
-                  <th colspan="2">GP Abu Dhabi</th>
+                  <th colspan="4">GP Abu Dhabi</th>
+                </tr>
+                <tr>
+                  <th>Pos.</th>
+                  <th>Piloto</th>
+                  <th>Tempo</th>
+                  <th>pts</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>
-                    <span class="fi fi-gb"></span> Lando Norris <span></span>
-                  </td>
+                  <td><span class="fi fi-gb"></span> Lando Norris</td>
+                  <td>1:26:33.291</td>
+                  <td>25</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>
-                    <span class="fi fi-es"></span> Carlos Sainz Jr.
-                    <span></span>
-                  </td>
+                  <td><span class="fi fi-es"></span> Carlos Sainz Jr.</td>
+                  <td>+5.832s</td>
+                  <td>18</td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>
-                    <span class="fi fi-mc"></span> Charles Leclerc <span></span>
-                  </td>
+                  <td><span class="fi fi-mc"></span> Charles Leclerc</td>
+                  <td>+31.928s</td>
+                  <td>15</td>
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>
-                    <span class="fi fi-gb"></span> Louis Hamilton <span></span>
-                  </td>
+                  <td><span class="fi fi-gb"></span> Lewis Hamilton</td>
+                  <td>+36.483s</td>
+                  <td>12</td>
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>
-                    <span class="fi fi-gb"></span> George Russel <span></span>
-                  </td>
+                  <td><span class="fi fi-gb"></span> George Russel</td>
+                  <td>+37.538s</td>
+                  <td>10</td>
                 </tr>
                 <tr>
                   <td>6</td>
-                  <td>
-                    <span class="fi fi-be"></span> Max Vertappen <span></span>
-                  </td>
+                  <td><span class="fi fi-be"></span> Max Vertappen</td>
+                  <td>+49.847s</td>
+                  <td>8</td>
                 </tr>
                 <tr>
                   <td>7</td>
-                  <td>
-                    <span class="fi fi-fr"></span>Pierre Gasly <span></span>
-                  </td>
+                  <td><span class="fi fi-fr"></span>Pierre Gasly</td>
+                  <td>72.560s</td>
+                  <td>6</td>
                 </tr>
                 <tr>
                   <td>8</td>
-                  <td>
-                    <span class="fi fi-de"></span> Nico Hulkenberg <span></span>
-                  </td>
+                  <td><span class="fi fi-de"></span> Nico Hulkenberg</td>
+                  <td>75.554s</td>
+                  <td>4</td>
                 </tr>
                 <tr>
                   <td>9</td>
-                  <td>
-                    <span class="fi fi-es"></span> Fernando Alonso <span></span>
-                  </td>
+                  <td><span class="fi fi-es"></span> Fernando Alonso</td>
+                  <td>82.373s</td>
+                  <td>2</td>
                 </tr>
                 <tr>
                   <td>10</td>
-                  <td>
-                    <span class="fi fi-au"></span>Oscar Piastri <span></span>
-                  </td>
+                  <td><span class="fi fi-au"></span>Oscar Piastri</td>
+                  <td>83.821s</td>
+                  <td>1</td>
                 </tr>
               </tbody>
             </table>
@@ -169,62 +178,76 @@
             <table>
               <thead>
                 <tr>
-                  <th colspan="2">GP Austrália</th>
+                  <th colspan="4">GP Austrália</th>
+                </tr>
+                <tr>
+                  <th>Pos.</th>
+                  <th>Piloto</th>
+                  <th>Tempo</th>
+                  <th>pts</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td><span class="flag"></span>Lando Norris <span></span></td>
+                  <td><span class="fi fi-gb"></span> Lando Norris</td>
+                  <td>1:42:06.304</td>
+                  <td>25</td>
                 </tr>
+
                 <tr>
                   <td>2</td>
-                  <td>
-                    <span class="flag"></span>Max Verstappen <span></span>
-                  </td>
+                  <td><span class="fi fi-be"></span> Max Verstappen</td>
+                  <td>0.895s</td>
+                  <td>18</td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td><span class="flag"></span>George Russel <span></span></td>
+                  <td><span class="fi fi-gb"></span> George Russel</td>
+                  <td>+8.481s</td>
+                  <td>15</td>
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>
-                    <span class="flag"></span>Andrea Kimi Antonelli
-                    <span></span>
-                  </td>
+                  <td><span class="fi fi-it"></span> Andrea Antonelli</td>
+                  <td>+10.135s</td>
+                  <td>12</td>
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>
-                    <span class="flag"></span>Alexander Albon <span></span>
-                  </td>
+                  <td><span class="fi fi-th"></span> Alexander Albon</td>
+                  <td>+12.773s</td>
+                  <td>10</td>
                 </tr>
                 <tr>
                   <td>6</td>
-                  <td><span class="flag"></span>Lance Stroll <span></span></td>
+                  <td><span class="fi fi-ca"></span> Lance Stroll</td>
+                  <td>+17.413s</td>
+                  <td>8</td>
                 </tr>
                 <tr>
                   <td>7</td>
-                  <td>
-                    <span class="flag"></span>Nico Hulkenberg <span></span>
-                  </td>
+                  <td><span class="fi fi-de"></span> Nico Hulkenberg</td>
+                  <td>+18.423s</td>
+                  <td>6</td>
                 </tr>
                 <tr>
                   <td>8</td>
-                  <td>
-                    <span class="flag"></span>Charles Leclerc <span></span>
-                  </td>
+                  <td><span class="fi fi-mc"></span> Charles Leclerc</td>
+                  <td>+19.826s</td>
+                  <td>4</td>
                 </tr>
                 <tr>
                   <td>9</td>
-                  <td><span class="flag"></span>Oscar Piastri <span></span></td>
+                  <td><span class="fi fi-au"></span> Oscar Piastri</td>
+                  <td>+20.448s</td>
+                  <td>2</td>
                 </tr>
                 <tr>
                   <td>10</td>
-                  <td>
-                    <span class="flag"></span>Lewis Hamilton <span></span>
-                  </td>
+                  <td><span class="fi fi-gb"></span> Lewis Hamilton</td>
+                  <td>+20.473s</td>
+                  <td>1</td>
                 </tr>
               </tbody>
             </table>
@@ -233,63 +256,1268 @@
             <table>
               <thead>
                 <tr>
-                  <th colspan="2">GP China</th>
+                  <th colspan="4">GP China</th>
+                </tr>
+                <tr>
+                  <th>Pos.</th>
+                  <th>Piloto</th>
+                  <th>Tempo</th>
+                  <th>pts</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td><span class="flag"></span>Oscar Piastri <span></span></td>
+                  <td><span class="fi fi-au"></span> Oscar Piastri</td>
+                  <td>1:30:55.026</td>
+                  <td>25</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td><span class="flag"></span>Lando Norris <span></span></td>
+                  <td><span class="fi fi-gb"></span> Lando Norris</td>
+                  <td>+9.748s</td>
+                  <td>18</td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td><span class="flag"></span>George Russel <span></span></td>
+                  <td><span class="fi fi-gb"></span> George Russel</td>
+                  <td>+11.097s</td>
+                  <td>15</td>
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>
-                    <span class="flag"></span>Max Verstappen <span></span>
-                  </td>
+                  <td><span class="fi fi-be"></span> Max Verstappen</td>
+                  <td>+16.656s</td>
+                  <td>12</td>
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>
-                    <span class="flag"></span>Charles Leclerc <span></span>
-                  </td>
+                  <td><span class="fi fi-mc"></span> Charles Leclerc</td>
+                  <td>+56 voltas</td>
+                  <td>0</td>
                 </tr>
                 <tr>
                   <td>6</td>
-                  <td>
-                    <span class="flag"></span>Lewis Hamilton <span></span>
-                  </td>
+                  <td><span class="fi fi-gb"></span> Lewis Hamilton</td>
+                  <td>+56 voltas</td>
+                  <td>0</td>
                 </tr>
                 <tr>
                   <td>7</td>
-                  <td><span class="flag"></span>Esteban Ocon <span></span></td>
+                  <td><span class="fi fi-fr"></span> Esteban Ocon</td>
+                  <td>+49.969s</td>
+                  <td>10</td>
                 </tr>
                 <tr>
                   <td>8</td>
-                  <td>
-                    <span class="flag"></span>Andrea Kimi Antonelli
-                    <span></span>
-                  </td>
+                  <td><span class="fi fi-it"></span> Andrea Antonelli</td>
+                  <td>+53.748s</td>
+                  <td>8</td>
                 </tr>
                 <tr>
                   <td>9</td>
-                  <td>
-                    <span class="flag"></span>Alexander Albon <span></span>
-                  </td>
+                  <td><span class="fi fi-th"></span> Alexander Albon</td>
+                  <td>+56.321s</td>
+                  <td>6</td>
                 </tr>
                 <tr>
                   <td>10</td>
-                  <td><span class="flag"></span>Pierre Gasly <span></span></td>
+                  <td><span class="fi fi-fr"></span> Pierre Gasly</td>
+                  <td>+61.303s</td>
+                  <td>4</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Classificacao -->
+
+      <section id="class" class="classificacao">
+        <div class="background__class">
+          <div class="section__content">
+            <div class="section__text">
+              <h1>
+                Classificação <br />
+                Pilotos
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="classification__table">
+          <div class="table__classification">
+            <table>
+              <thead>
+                <tr></tr>
+                <tr>
+                  <th>Pos.</th>
+                  <th>Piloto</th>
+                  <th>Pontos</th>
+                  <th>Vitórias</th>
+                  <th>Pódios</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><span class="fi fi-gb"></span> Lando Norris</td>
+
+                  <td>44</td>
+                  <td>1</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><span class="fi fi-be"></span> Max Verstappen</td>
+                  <td>36</td>
+                  <td>0</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><span class="fi fi-gb"></span> George Russel</td>
+                  <td>35</td>
+                  <td>0</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><span class="fi fi-au"></span> Oscar Piastri</td>
+
+                  <td>34</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><span class="fi fi-it"></span> Andrea Antonelli</td>
+
+                  <td>22</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><span class="fi fi-th"></span> Alexander Albon</td>
+
+                  <td>16</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><span class="fi fi-fr"></span> Esteban Ocon</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><span class="fi fi-ca"></span> Lance Stroll</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><span class="fi fi-gb"></span> Lewis Hamilton</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><span class="fi fi-mc"></span> Charles Leclerc</td>
+
+                  <td>8</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><span class="fi fi-de"></span> Nico Hulkenberg</td>
+
+                  <td>6</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><span class="fi fi-gb"></span> Oliver Bearman</td>
+
+                  <td>4</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td><span class="fi fi-jp"></span> Yuki Tsunoda</td>
+
+                  <td>3</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td><span class="fi fi-es"></span> Carlos Sainz Jr.</td>
+
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>E15</td>
+                  <td><span class="fi fi-fr"></span> Pierre Gasly</td>
+
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>E15</td>
+                  <td><span class="fi fi-fr"></span> Isack Hadjar</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td><span class="fi fi-nz"></span> Liam Lawson</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td><span class="fi fi-nz"></span> Jack Doohan</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td><span class="fi fi-br"></span> Gabriel Bortoleto</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td><span class="fi fi-es"></span> Fernando Alonso</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Classificação Equipes -->
+
+      <section id="equipes" class="classificacao">
+        <div class="background__class-equipes">
+          <div class="section__content">
+            <div class="section__text">
+              <h1>
+                Classificação <br />
+                Equipes
+              </h1>
+            </div>
+          </div>
+        </div>
+        <section id="etapas">
+          <div class="section__title">
+            <h1>ETAPAS</h1>
+          </div>
+          <div class="table__etapas">
+            <div class="table__etapa">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="4">GP Abu Dhabi</th>
+                  </tr>
+                  <tr>
+                    <th>Pos.</th>
+                    <th>Construtor</th>
+                    <th>pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/ferrari.svg" alt="" width="20px" />
+                        Ferrari</span
+                      >
+                    </td>
+                    <td>33</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/mclaren.svg" alt="" width="20px" />
+                        McLaren</span
+                      >
+                    </td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/mercedes.png"
+                          alt=""
+                          width="20px"
+                        />Mercedes</span
+                      >
+                    </td>
+                    <td>24</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Red-Two-Bull.png"
+                          alt=""
+                          width="30px"
+                        />
+                        Red Bull</span
+                      >
+                    </td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/alpine-seeklogo.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Alpine</span
+                      >
+                    </td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Logo_Haas_F1.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Haas</span
+                      >
+                    </td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/aston.svg" alt="" width="20px" />
+                        Aston Martin</span
+                      >
+                    </td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Logo_Williams_F1.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Williams</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Racing_Bulls.svg"
+                          alt=""
+                          width="20px"
+                        />
+                        Racing Bulls</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/sauber.svg" alt="" width="20px" />
+                        Kick Sauber</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table__etapa">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="4">GP Austrália</th>
+                  </tr>
+                  <tr>
+                    <th>Pos.</th>
+                    <th>Construtor</th>
+                    <th>pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>E1</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/mercedes.png"
+                          alt=""
+                          width="20px"
+                        />Mercedes</span
+                      >
+                    </td>
+                    <td>27</td>
+                  </tr>
+                  <tr>
+                    <td>E1</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/mclaren.svg" alt="" width="20px" />
+                        McLaren</span
+                      >
+                    </td>
+                    <td>27</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Red-Two-Bull.png"
+                          alt=""
+                          width="30px"
+                        />
+                        Red Bull</span
+                      >
+                    </td>
+                    <td>18</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Logo_Williams_F1.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Williams</span
+                      >
+                    </td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/aston.svg" alt="" width="20px" />
+                        Aston Martin</span
+                      >
+                    </td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/sauber.svg" alt="" width="20px" />
+                        Kick Sauber</span
+                      >
+                    </td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/ferrari.svg" alt="" width="20px" />
+                        Ferrari</span
+                      >
+                    </td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Racing_Bulls.svg"
+                          alt=""
+                          width="20px"
+                        />
+                        Racing Bulls</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Logo_Haas_F1.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Haas</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/alpine-seeklogo.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Alpine</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table__etapa">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="4">GP China</th>
+                  </tr>
+                  <tr>
+                    <th>Pos.</th>
+                    <th>Construtor</th>
+                    <th>pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/mclaren.svg" alt="" width="20px" />
+                        McLaren</span
+                      >
+                    </td>
+                    <td>38</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/mercedes.png"
+                          alt=""
+                          width="20px"
+                        />Mercedes</span
+                      >
+                    </td>
+                    <td>23</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Logo_Haas_F1.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Haas</span
+                      >
+                    </td>
+                    <td>14</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Red-Two-Bull.png"
+                          alt=""
+                          width="30px"
+                        />
+                        Red Bull</span
+                      >
+                    </td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Logo_Williams_F1.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Williams</span
+                      >
+                    </td>
+                    <td>7</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/aston.svg" alt="" width="20px" />
+                        Aston Martin</span
+                      >
+                    </td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/ferrari.svg" alt="" width="20px" />
+                        Ferrari</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/alpine-seeklogo.png"
+                          alt=""
+                          width="20px"
+                        />
+                        Alpine</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img
+                          src="./assets/Racing_Bulls.svg"
+                          alt=""
+                          width="20px"
+                        />
+                        Racing Bulls</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      <span class="logo-constructor"
+                        ><img src="./assets/sauber.svg" alt="" width="20px" />
+                        Kick Sauber</span
+                      >
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+      <h1>CLASSIFICAÇÃO GERAL</h1>
+      <div class="classification__table">
+        <div class="table__classification" id="constructorid">
+          <table>
+            <thead>
+              <tr></tr>
+              <tr>
+                <th>Pos.</th>
+                <th>Construtor</th>
+                <th>Pontos</th>
+                <th>Vitórias</th>
+                <th>Pódios</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/mclaren.svg" alt="" width="20px" />
+                    McLaren</span
+                  >
+                </td>
+
+                <td>78</td>
+                <td>2</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img
+                      src="./assets/mercedes.png"
+                      alt=""
+                      width="20px"
+                    />Mercedes</span
+                  >
+                </td>
+                <td>57</td>
+                <td>0</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/Red-Two-Bull.png" alt="" width="30px" />
+                    Red Bull</span
+                  >
+                </td>
+                <td>36</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img
+                      src="./assets/Logo_Williams_F1.png"
+                      alt=""
+                      width="20px"
+                    />
+                    Williams</span
+                  >
+                </td>
+
+                <td>17</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/ferrari.svg" alt="" width="20px" />
+                    Ferrari</span
+                  >
+                </td>
+
+                <td>17</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/Logo_Haas_F1.png" alt="" width="20px" />
+                    Haas</span
+                  >
+                </td>
+
+                <td>14</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/aston.svg" alt="" width="20px" /> Aston
+                    Martin</span
+                  >
+                </td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/sauber.svg" alt="" width="20px" /> Kick
+                    Sauber</span
+                  >
+                </td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img src="./assets/Racing_Bulls.svg" alt="" width="20px" />
+                    Racing Bulls</span
+                  >
+                </td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>
+                  <span class="logo-constructor"
+                    ><img
+                      src="./assets/alpine-seeklogo.png"
+                      alt=""
+                      width="20px"
+                    />
+                    Alpine</span
+                  >
+                </td>
+
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <section class="grid">
+        <div class="gridconstructors">
+          <a href="#constructorid" class="hover-border">
+            <div class="border">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>1</p>
+                  <div>
+                    <p><span>78</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam">
+                  <span>McLaren</span>
+                  <img src="./assets/mclaren.svg" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Oscar<span> Piastri</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Lando<span> Norris</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/mclaren.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border mercedes">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>2</p>
+                  <div>
+                    <p><span>57</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam mercedes">
+                  <span>Mercedes</span>
+                  <img src="./assets/mercedes.png" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>George<span> Russel</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Kimi<span> Antonelli</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/mercedes.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border redbull">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>3</p>
+                  <div>
+                    <p><span>36</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam redbull">
+                  <span>Red Bull Racing</span>
+                  <img src="./assets/Red-Two-Bull.png" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Max<span> Vertappen</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Liam<span> Lawson</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/red-bull-racing.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border williams">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>4</p>
+                  <div>
+                    <p><span>17</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam williams">
+                  <span>Williams</span>
+                  <img
+                    src="./assets/Logo_Williams_F1.png"
+                    alt=""
+                    width="30px"
+                  />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Alexander<span> Albon</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Carlos<span> Sainz</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/williams.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border ferrari">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>5</p>
+                  <div>
+                    <p><span>17</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam ferrari">
+                  <span>Ferrari</span>
+                  <img src="./assets/ferrari.svg" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Charles<span> Leclerc</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Lewis<span> Hamilton</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/ferrari.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border haas">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>6</p>
+                  <div>
+                    <p><span>14</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam haas">
+                  <span>Haas</span>
+                  <img src="./assets/Logo_Haas_F1.png" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Esteban<span> Ocon</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Oliver<span> Bearman</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/haas.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border aston">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>7</p>
+                  <div>
+                    <p><span>10</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam aston">
+                  <span>Aston Martin</span>
+                  <img src="./assets/aston.svg" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Lance<span> Stroll</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Fernando<span> Alonso</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/aston-martin.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border sauber">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>8</p>
+                  <div>
+                    <p><span>6</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam sauber">
+                  <span>Kick Sauber</span>
+                  <img src="./assets/sauber.svg" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Nico<span> Hulkenberg</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Gabriel<span> Bortoleto</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/kick-sauber.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border racingbulls">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>9</p>
+                  <div>
+                    <p><span>3</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam racingbulls">
+                  <span>Racing Bulls</span>
+                  <img src="./assets/Racing_Bulls.svg" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Isack<span> Hadjar</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Yuki<span> Tsunoda</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/racing-bulls.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="." class="hover-border">
+            <div class="border alpine">
+              <div class="wrapper">
+                <div class="positionpts">
+                  <p>10</p>
+                  <div>
+                    <p><span>0</span></p>
+                    <p>PTS</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="contructorteam alpine">
+                  <span>Alpine</span>
+                  <img src="./assets/alpine-seeklogo.png" alt="" width="30px" />
+                </div>
+                <hr />
+                <div class="pilots">
+                  <div class="piloto">
+                    <p>Pierre<span> Gasly</span></p>
+                  </div>
+                  <div class="piloto">
+                    <p>Jack<span> Doohan</span></p>
+                  </div>
+                </div>
+                <div class="car">
+                  <img
+                    src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/alpine.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="sistemapts" id="sistemapts">
+        <h1>SISTEMA DE PONTUAÇÃO</h1>
+        <div class="classification__table pts">
+          <div class="table__classification pts">
+            <table>
+              <thead>
+                <tr></tr>
+                <tr>
+                  <th>Posição</th>
+                  <th>Pontos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>25 Pontos</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>18 Pontos</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>15 Pontos</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>12 Pontos</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>10 Pontos</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>8 Pontos</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>6 Pontos</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>4 Pontos</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>2 Pontos</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>1 Pontos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="points">
+            <h1>Pontuação de Equipes</h1>
+            <p>
+              A pontuação da equipe é a soma dos pontos do piloto da equipe:
+              <br />
+              Ex. os pilotos da RBR <span>Max Verstappen</span> e
+              <span>Sergio Perez</span> respectivamente conquistaram a pontuação
+              de <b>25</b> e <b>12</b> pontos na etapa, então a equipe RBR
+              recebeu <b>37 pontos</b> na etapa
+            </p>
           </div>
         </div>
       </section>
