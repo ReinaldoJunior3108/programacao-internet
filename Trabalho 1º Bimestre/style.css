@@ -36,15 +36,27 @@
 html {
   font-family: "f1font", sans-serif;
 }
+html::-webkit-scrollbar {
+  width: 0.4rem;
+}
+html::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 0.5rem;
+}
 body {
   background: #000000;
   color: #fff;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
 @media (max-width: 480px) {
   body {
     width: 100vw;
+    overflow-x: hidden;
   }
 }
 h1 {
@@ -57,7 +69,7 @@ section {
 .hero__container {
   width: 100%;
   height: 100%;
-  min-height: -webkit-fill-available; /* Fallback for Safari */
+  min-height: -webkit-fill-available;
   position: relative;
   filter: grayscale(100);
   animation: greyscale 5s forwards;
@@ -125,19 +137,6 @@ section {
   position: absolute;
   bottom: 100px;
   right: 0;
-  animation: fromtop 3s ease;
-}
-@keyframes fromtop {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-  }
 }
 
 .hero__fialogo svg {
@@ -152,7 +151,6 @@ section {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
   letter-spacing: 1rem;
-  animation: opacity 6s ease;
   word-spacing: 1rem;
 }
 .hero-title p {
@@ -162,15 +160,6 @@ section {
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: normal;
-}
-@keyframes opacity {
-  0%,
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 @media (max-width: 480px) {
   .hero__title {
