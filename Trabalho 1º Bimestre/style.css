@@ -626,14 +626,14 @@ th:nth-child(2) {
   .sistemapts > h1 {
     font-size: 1.5rem;
   }
-  .table__classification.pts {
+  .table__classificationpts {
     width: 100%;
     font-size: 1rem;
   }
-  .table__classification.pts > table > thead th:nth-child(2) {
+  .table__classificationpts > table > thead th:nth-child(2) {
     text-align: right;
   }
-  .table__classification.pts > table > tbody td:nth-child(2) {
+  .table__classificationpts > table > tbody td:nth-child(2) {
     text-align: right;
   }
   .points {
