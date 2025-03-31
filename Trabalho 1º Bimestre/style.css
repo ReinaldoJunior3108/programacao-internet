@@ -126,6 +126,9 @@ section {
   .navbar {
     display: none;
   }
+  .hero__container {
+    margin: 0 auto;
+  }
 }
 .hero__fialogo {
   width: 150px;
