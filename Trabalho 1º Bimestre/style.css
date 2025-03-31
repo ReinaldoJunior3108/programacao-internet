@@ -399,7 +399,7 @@ tbody tr {
     margin-bottom: 4rem;
   }
 }
-.border:hover {
+.border:is(:hover, :focus) {
   padding-top: 1.875rem;
   margin-top: -0.625rem;
   border-color: rgba(255, 128, 0, 1);
@@ -612,8 +612,15 @@ hr {
 .points h1 {
   margin-bottom: 2rem;
 }
-.table__classification.pts {
-  width: 40%;
+
+.table__classificationpts {
+  border-radius: 10px;
+  border: var(--table-border);
+  width: 20%;
+}
+.table__classificationpts table td:nth-child(2),
+th:nth-child(2) {
+  text-align: right;
 }
 @media (max-width: 480px) {
   .sistemapts > h1 {
