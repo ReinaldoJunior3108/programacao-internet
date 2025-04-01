@@ -414,36 +414,43 @@ tbody tr {
 }
 
 /* Construtores */
-
 .grid {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 2.5rem auto;
-  padding: 20px;
-  font-family: "f1font";
+  width: 90%;
 }
 .gridconstructors {
   display: grid;
-  grid-template-columns: repeat(2, 0fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   margin: 0 auto;
   gap: 2.5rem;
 }
 .gridpilots {
   display: grid;
   grid-template-columns: repeat(3, 0fr);
+  padding: 3rem;
   margin: 0 auto;
   gap: 2.5rem;
 }
-.gridpilots:nth-child(-n + 3) {
-  grid-template-columns: span 4 / span 4;
+@media (min-width: 768px) {
+  .gridpilots {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .hover-border {
+    grid-column: span 6 / span 6;
+  }
 }
+@media (min-width: 1360px) {
+  .gridpilots > *:nth-child(-n + 3) {
+    grid-column: span 4 / span 4;
+  }
+  .gridpilots > *:nth-child(n + 4) {
+    grid-column: span 3 / span 3;
+  }
+}
+
 .hover-border {
-  display: block;
+  grid-column: span 6 / span 6;
   color: inherit;
   text-decoration: inherit;
-  max-width: fit-content;
 }
 
 .border {
@@ -452,7 +459,6 @@ tbody tr {
   border-right-width: 0.125rem;
   border-top-right-radius: 0.9357rem;
   padding: 20px 20px 0 0;
-  max-width: fit-content;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (max-width: 480px) {
@@ -549,12 +555,13 @@ tbody tr {
   font-weight: bold;
   font-size: 1.5625rem;
   border-left: 3px;
-  border-left: 0.425rem solid rgba(39, 244, 210, 1);
+  border-left: 0.425rem solid rgba(255, 128, 0, 1);
   padding-left: 0.625rem;
 }
 .name {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
 }
 .name p:nth-child(1) {
   font-family: "f1font";
@@ -567,14 +574,16 @@ tbody tr {
 }
 .pilototeam {
   display: flex;
-  justify-content: baseline;
   align-items: baseline;
 }
 .pilototeam img:nth-child(2) {
-  max-width: 250px;
+  max-width: 75%;
 }
 .pilototeam img:nth-child(1) {
-  max-width: 96px;
+  max-width: 100%;
+  font-size: 6rem;
+  width: 1em;
+  height: 1em;
 }
 .contructorteam.mercedes {
   border-left: 0.425rem solid rgba(39, 244, 210, 1);
@@ -608,7 +617,8 @@ tbody tr {
   background-blend-mode: lighten;
   background-size: 8px;
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
+  align-items: baseline;
 }
 @media (max-width: 480px) {
   .car {
@@ -616,6 +626,7 @@ tbody tr {
   }
   .car > img {
     max-width: 100%;
+    height: auto;
     overflow-clip-margin: content-box;
     overflow: clip;
   }
