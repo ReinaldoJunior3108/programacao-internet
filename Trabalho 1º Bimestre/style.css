@@ -23,6 +23,11 @@
   font-weight: regular;
 }
 @font-face {
+  font-family: f1font;
+  src: url(./assets/Formula1-Regular-1.ttf);
+  font-weight: normal;
+}
+@font-face {
   font-family: f1wide;
   src: url(./assets/Formula1-Wide.ttf);
   font-weight: bold;
@@ -176,6 +181,8 @@ section {
     font-size: 2.5rem;
   }
 }
+/* Pilotos */
+
 /* Tabela de Posição */
 
 table {
@@ -412,7 +419,7 @@ tbody tr {
   width: 100%;
   display: flex;
   justify-content: center;
-
+  flex-direction: column;
   margin: 2.5rem auto;
   padding: 20px;
   font-family: "f1font";
@@ -422,6 +429,15 @@ tbody tr {
   grid-template-columns: repeat(2, 0fr);
   margin: 0 auto;
   gap: 2.5rem;
+}
+.gridpilots {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+.gridpilots:nth-child(-n + 3) {
+  grid-template-columns: span 4 / span 4;
 }
 .hover-border {
   display: block;
@@ -501,6 +517,7 @@ tbody tr {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
+  position: relative;
 }
 .positionpts {
   display: flex;
@@ -529,71 +546,62 @@ tbody tr {
 .contructorteam {
   display: flex;
   justify-content: space-between;
-}
-
-.contructorteam > span {
   font-weight: bold;
   font-size: 1.5625rem;
-}
-.contructorteam > span::before {
-  content: " ";
-  border-left: 0.425rem solid rgba(255, 128, 0, 1);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
-}
-.contructorteam.mercedes > span::before {
-  content: " ";
+  border-left: 3px;
   border-left: 0.425rem solid rgba(39, 244, 210, 1);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
+  padding-left: 0.625rem;
 }
-.contructorteam.redbull > span::before {
-  content: " ";
+.name {
+  display: flex;
+  flex-direction: column;
+}
+.name p:nth-child(1) {
+  font-family: "f1font";
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+.team {
+  font-weight: 100;
+  color: #dcdcdc;
+}
+.pilototeam {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+}
+.pilototeam img:nth-child(2) {
+  max-width: 250px;
+}
+.pilototeam img:nth-child(1) {
+  max-width: 96px;
+}
+.contructorteam.mercedes {
+  border-left: 0.425rem solid rgba(39, 244, 210, 1);
+}
+.contructorteam.redbull {
   border-left: 0.425rem solid rgba(54, 113, 198, 1);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.williams > span::before {
-  content: " ";
+.contructorteam.williams {
   border-left: 0.425rem solid rgba(24, 104, 219, 1);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.ferrari > span::before {
-  content: " ";
+.contructorteam.ferrari {
   border-left: 0.425rem solid rgba(232, 0, 45, 1);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.haas > span::before {
-  content: " ";
+.contructorteam.haas {
   border-left: 0.425rem solid rgba(182, 186, 189, 1);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.aston > span::before {
-  content: " ";
+.contructorteam.aston {
   border-left: 0.425rem solid rgb(34 153 113);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.sauber > span::before {
-  content: " ";
+.contructorteam.sauber {
   border-left: 0.425rem solid rgb(82 226 82);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.racingbulls > span::before {
-  content: " ";
+.contructorteam.racingbulls {
   border-left: 0.425rem solid rgb(102 146 255);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
-.contructorteam.alpine > span::before {
-  content: " ";
+.contructorteam.alpine {
   border-left: 0.425rem solid rgb(0 161 232);
-  border-radius: 0.125rem;
-  margin-right: 0.625rem;
 }
 .car {
   background: rgba(255, 255, 255, 0.1) url("./assets/plus-x2.avif");
