@@ -1,7 +1,7 @@
 ScrollReveal({
-  distance: "70px",
-  duration: 3000,
-  delay: 20,
+  distance: "80px",
+  duration: 3500,
+  delay: 30,
 });
 
 ScrollReveal().reveal(".hero__title", {
