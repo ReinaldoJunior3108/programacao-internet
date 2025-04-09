@@ -357,6 +357,9 @@ tbody tr {
   text-align: left;
   color: #404040;
 }
+.table__classification thead th:nth-child(2) {
+  text-align: left;
+}
 .table__classification thead th:nth-child(n + 3) {
   text-align: center;
 }
