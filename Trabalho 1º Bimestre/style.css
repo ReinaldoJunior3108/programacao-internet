@@ -188,18 +188,21 @@ section {
 table {
   border-collapse: collapse;
   width: 100%;
+  
 }
 thead th,
 tbody td {
   padding: 12px 16px;
 }
 tbody tr {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  
 }
 .table__etapa {
   border: var(--table-border);
   border-radius: 10px;
   width: 30%;
+  overflow: hidden;
 }
 .section__title {
   font-size: 2rem;
