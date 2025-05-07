@@ -4,10 +4,11 @@ let calc = document.querySelector("#calc");
 let valor = document.querySelector("#valor");
 
 function calcular() {
-  let kgvalor = Number(valorKg.value);
-  let kgQtd = Number(qtdKg.value);
+  let kgvalor = Number(valorKg.value.replace(',', '.'));
+  let kgQtd = Number(qtdKg.value.replace(',', '.'));
   let res = kgvalor * kgQtd;
-  valor.textContent = "Valor: R$" + res;
+  res = res.toFixed(2).replace('.', ',')
+  valor.textContent =  `Valor : R$${res}`;
 }
 calc.onclick = function () {
   calcular();
