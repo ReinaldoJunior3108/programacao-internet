@@ -1,0 +1,119 @@
+*{
+    color:white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #000000;
+    gap:4rem;
+    
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    width: 60%;
+    
+} 
+input{
+    width: 30%;
+    padding: 1rem;
+    background:transparent;
+    border: 1px solid #2f93d6;
+    box-shadow: inset 0 0 10px #2f93d6;
+    border-radius: .375rem;
+    text-align: center;
+    transition: all .5s ease;
+}
+.btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    background: transparent;
+    border: none;
+    box-shadow:0 10px 25px rgba(255, 255, 255, 0.1);
+    transition: .5s;
+    border: 1px solid rgba(90, 147, 255, 0.3);
+}
+.btn:hover{
+    width: 180px;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    inset:0;
+    background: linear-gradient(45deg, #56CCF2, #2F80ED);
+    border-radius: 999px;
+    opacity: 0;
+    transition: .5s ;  
+    transition-delay: 0;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    top:5px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #56CCF2, #2F80ED);
+    border-radius: 999px;
+    opacity: 0;
+    transition: .5s ;  
+    z-index: -2;
+    filter: blur(15px);
+  
+}
+.btn:hover::before{
+    opacity: 1;
+
+}
+.btn:hover::after{
+    opacity: 0.5;
+}
+
+ion-icon{
+    font-size: 1.75em;
+    transition: .5s;
+    transition-delay: .25s;
+}
+.btn:hover ion-icon{
+    transform: scale(0);
+    color: transparent;
+    transition-delay: .0;
+
+}
+span{
+    position: absolute;
+}
+.title{
+    opacity: 0;
+    transform: scale(0);
+    transition: .5s;
+    transition-delay: 0s;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+}
+.btn:hover .title{
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: .25s;
+}
+input::placeholder{
+    text-align: center;
+}
+input:focus{
+    outline: none;
+    border: 2px solid #2f93d6;
+    scale: 1.04;
+}
+
