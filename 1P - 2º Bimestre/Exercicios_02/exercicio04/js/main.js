@@ -1,7 +1,7 @@
-let sabor1 = document.querySelector("#sabor1");
-let sabor2 = document.querySelector("#sabor2");
-let sabor3 = document.querySelector("#sabor3");
-let sabor4 = document.querySelector("#sabor4");
+let sabor1 = document.querySelector("#primeiroSabor");
+let sabor2 = document.querySelector("#segundoSabor");
+let sabor3 = document.querySelector("#terceiroSabor");
+let sabor4 = document.querySelector("#quartoSabor");
 let refri = document.querySelector("#refri");
 let calc = document.querySelector("#calc");
 let resultado = document.querySelector("#resultado");
@@ -20,27 +20,14 @@ function pedido() {
 calc.addEventListener('click', () => {
     pedido()
 })
-var data = [
-  {
-      value: 300,
-      color:"#F7464A",
-      highlight: "#FF5A5E",
-      label: "Red"
-  },
-  {
-      value: 50,
-      color: "#46BFBD",
-      highlight: "#5AD3D1",
-      label: "Green"
-  },
-  {
-      value: 100,
-      color: "#FDB45C",
-      highlight: "#FFC870",
-      label: "Yellow"
-  }
-];
 
-var ctx = document.getElementById("myChart").getContext("2d");
-new Chart(ctx).Pie(data);
-//new Chart(ctx).Doughnut(data);
+function increase() {
+    let valueRefri = Number(document.querySelector('#refri').value)
+    valueRefri < 5 ?valueRefri++ : '' ;
+    document.querySelector('#refri').value = valueRefri
+}
+function decrease() {
+    let valueRefri = Number(document.querySelector('#refri').value)
+    valueRefri < 1 ? '' : valueRefri--;
+    document.querySelector('#refri').value = valueRefri
+}

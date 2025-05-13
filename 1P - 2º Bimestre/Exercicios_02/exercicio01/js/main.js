@@ -1,7 +1,7 @@
 let dolar = document.querySelector('#dolar');
 let calc = document.querySelector('#calc');
-let resultado = document.querySelector('#resultado')
-
+let resultado = document.querySelector('#resultado');
+console.log('ola')
 function mascara(dolar) {
 	let valorAlterado = dolar.value;
     valorAlterado = valorAlterado.replace(/\D/g, "")

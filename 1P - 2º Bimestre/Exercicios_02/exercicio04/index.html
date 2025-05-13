@@ -19,12 +19,44 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="margin-z-auto margin-top[3rem] flex flex-col">
-        <input type="text" id="sabor1" placeholder="Escolha o primeiro Sabor" />
-    <input type="text" id="sabor2" placeholder="Escolha o segundo Sabor" />
-    <input type="text" id="sabor3" placeholder="Escolha o terceior Sabor" />
-    <input type="text" id="sabor4" placeholder="Escolha o quarto Sabor" />
-    <input type="text" id="refri" placeholder="Escolha quantidade de Refris" />
+    <div>
+    <select name="sabor" id="primeiroSabor">
+      <option value="" disabled selected>Selecione um Sabor</option>
+      <option value="Pepperoni">Pepperoni (R$12,00)</option>
+      <option value="Frango">Frango (R$12,00)</option>
+      <option value="4 Queijos">4 Queijos (R$12,00)</option>
+      <option value="Calabresa">Calabresa (R$12,00)</option>
+      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+    </select>
+    <select name="sabor" id="segundoSabor">
+      <option value="" disabled selected>Selecione um Sabor</option>
+      <option value="Pepperoni">Pepperoni (R$12,00)</option>
+      <option value="Frango">Frango (R$12,00)</option>
+      <option value="4 Queijos">4 Queijos (R$12,00)</option>
+      <option value="Calabresa">Calabresa (R$12,00)</option>
+      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+    </select>
+    <select name="sabor" id="terceiroSabor">
+      <option value="" disabled selected>Selecione um Sabor</option>
+      <option value="Pepperoni">Pepperoni (R$12,00)</option>
+      <option value="Frango">Frango (R$12,00)</option>
+      <option value="4 Queijos">4 Queijos (R$12,00)</option>
+      <option value="Calabresa">Calabresa (R$12,00)</option>
+      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+    </select>
+    <select name="sabor" id="quartoSabor">
+      <option value="" disabled selected>Selecione um Sabor</option>
+      <option value="Pepperoni">Pepperoni (R$12,00)</option>
+      <option value="Frango">Frango (R$12,00)</option>
+      <option value="4 Queijos">4 Queijos (R$12,00)</option>
+      <option value="Calabresa">Calabresa (R$12,00)</option>
+      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+    </select>
+    <form>
+      <div onclick="decrease()">-</div>
+      <input type="text" id="refri" placeholder="Refris" />
+      <div onclick="increase()">+</div>
+    </form>
     <button class="btn" id="calc"><ion-icon name="cart-outline"></ion-icon><span class="title">Realizar Pedido</span></button>
     <p id="resultado"></p>
     </div>
