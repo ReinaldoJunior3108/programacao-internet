@@ -6,5 +6,5 @@ function calc() {
 
     const res = (((Number(x2) - Number(x1)) ** 2) + ((Number(y2) - Number(y1)) ** 2)) ** 0.5
 
-    document.querySelector('#result').innerHTML = `A distancia entre os pontos é: ${res}`
+    document.querySelector('#result').innerHTML = `A distancia entre os pontos é: ${res.toFixed(2)}`
 }

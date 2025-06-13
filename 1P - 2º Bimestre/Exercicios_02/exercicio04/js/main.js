@@ -31,3 +31,11 @@ function decrease() {
     valueRefri < 1 ? '' : valueRefri--;
     document.querySelector('#refri').value = valueRefri
 }
+const toggleButton = document.querySelector('#toggleButton')
+const cart = document.querySelector('#cart')
+const navCart = document.querySelector('#navCart')
+
+toggleButton.addEventListener('click', () => {
+    cart.classList.toggle('open')
+    navCart.classList.toggle('open')
+})

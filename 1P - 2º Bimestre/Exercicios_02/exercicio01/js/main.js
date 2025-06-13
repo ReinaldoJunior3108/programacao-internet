@@ -28,3 +28,7 @@ function calcular(){
 calc.addEventListener('click', () => {
     calcular()
 })
+
+
+
+

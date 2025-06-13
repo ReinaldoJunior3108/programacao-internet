@@ -1,65 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/style.css"/>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/franken-ui@2.1.0-next.6/dist/css/core.min.css"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/franken-ui@2.1.0-next.6/dist/css/core.min.css"
     />
     <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <title>Document</title>
-  </head>
-  <body>
-    <div>
+</head>
+<body>
+<div class="navCart" id="navCart">
+    <div class="toggle" id="toggleButton">
+        <ion-icon name="cart-outline"></ion-icon>
+    </div>
+    <div class="cart" id="cart">
+        <h1>Resumo do Pedido</h1>
+        <ul>
+            <li>Pizza Grande
+                <ul class="saboresCart">
+                    <li>Sem Borda</li>
+                    <li>Frango com Catupiry</li>
+                    <li>Frango com Catupiry</li>
+                    <li>Frango com Catupiry</li>
+                    <li>Frango com Catupiry</li>
+                    <li>Coca-Cola 2L</li>
+                </ul>
+            </li>
+            <li></li>
+        </ul>
+        <div class="cartFinal">
+            <p class="deliveryAddress">Endereço: <span>Rua dos Banzeiros - 999 </span> <br>Frete: R$8,00</p>
+            <p class="cartTotal">Valor Total: <span>R$100,00</span></p>
+            <a href="" class="orderButton">Realizar Pedido</a>
+        </div>
+    </div>
+</div>
+<nav class="navbar">
+    <ul>
+        <li><a class="nav__link" href="">Inicio</a></li>
+        <li><a class="nav__link" href="">Pizzas</a></li>
+        <li><a class="nav__link" href="">Bebidas</a></li>
+        <li><a class="nav__link" href="">Sobre</a></li>
+        <li><a class="nav__link" href="">Contato</a></li>
+    </ul>
+</nav>
+
+<div class="hero__container">
+    <div class="filter__hero"></div>
+
+    <div class="hero__text">
+        <h1>Hot, Fresh & <br> <span>Irresistible <br> Pizza</span></h1> <br> <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita facilis iure nesciunt sunt voluptatem.
+            Deleniti exercitationem labore reprehenderit sequi veritatis!</p>
+        <div class="hero__buttons">
+            <div class="btn__wrapper"><a class="btn" href="">
+                <ion-icon name="cart-outline"></ion-icon>
+                <p>Realizar Pedido</p></a></div>
+            <div class="btn__wrapper"><a class="btn" href="">
+                <ion-icon name="pizza-outline"></ion-icon>
+                <p>Sabores</p></a></div>
+        </div>
+    </div>
+    <img src="src/img/pizza.png" alt="" class="hero__img"/>
+
+</div>
+<div class="offers">
+    <div class="filter__offers"></div>
+
+    <div class="offers__wrapper">
+        <div class="card">
+            <h1 class="card__title">Pizza Grande + Refri <br> Por Apenas: <br> <span>R$100,00</span></h1>
+
+            <div class="card__images"><img src="./src/img/pizza_hero.png" alt="" width="50%">
+                <p>+</p>
+                <img src="./src/img/refri.png" alt="" width="50px">
+            </div>
+            <a href="">Comprar</a>
+        </div>
+        <p class="wordPizza">Pizza</p>
+        <div class="card">
+            <h1 class="card__title">Pizza Grande + Refri <br> Por Apenas: <br> <span>R$100,00</span></h1>
+
+            <div class="card__images"><img src="./src/img/pizza_hero.png" alt="" width="50%">
+                <p>+</p>
+                <img src="./src/img/refri.png" alt="" width="50px">
+            </div>
+            <a href="">Comprar</a>
+        </div>
+        <p class="wordLovers">Lovers</p>
+        <div class="card">
+            <h1 class="card__title">Pizza Grande + Refri <br> Por Apenas: <br> <span>R$100,00</span></h1>
+
+            <div class="card__images"><img src="./src/img/pizza_hero.png" alt="" width="50%">
+                <p>+</p>
+                <img src="./src/img/refri.png" alt="" width="50px">
+            </div>
+            <a href="">Comprar</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="quality">
+    <div class="filter__offers"></div>
+    <div class="quality__wrapper">
+        <div class="quality__text">
+            <h1 class="title__quality">🍕 Sabor que conquista, <span>qualidade que surpreende</span></h1>
+            <p>Na nossa pizzaria, cada fatia é uma experiência. Usamos ingredientes frescos, massas artesanais e molhos
+                preparados com receitas exclusivas para entregar o verdadeiro sabor da pizza italiana com um toque
+                especial.
+                <br>
+
+                Nossas pizzas são assadas no ponto certo para garantir uma crocância irresistível e cobertas com queijos
+                selecionados, vegetais frescos e carnes de alta qualidade. Do clássico ao gourmet, cada combinação é
+                pensada
+                para agradar todos os paladares. <br>
+
+                Aqui, qualidade não é diferencial — é padrão. Experimente e descubra por que a nossa pizza é mais que
+                uma
+                refeição: é um momento de prazer.
+
+            </p>
+        </div>
+        <div class="img__quality"><img src="./src/img/salamiPizza.jpg" alt=""></div>
+    </div>
+</div>
+<div class="order__container">
+    <h1>Realizar Pedido</h1>
+    <div class="order__wrapper">
+        <div class="order__card">
+            <div class="order__title">
+                <h1>Pizza G</h1>
+                <p>4 sabores / 12 fatias</p>
+            </div>
+            <img src="src/img/pizza_hero.png" alt="">
+            <div class="order__price">
+                <h2>A partir de <br><br> <span class="order__normalPrice">R$115,00</span><br> <span class="order__promotionalPrice">R$100,00</span></h2>
+            </div>
+            <a href="">Comprar</a>
+        </div>
+        <div class="order__card">
+            <div class="order__title">
+                <h1>Pizza G</h1>
+                <p>4 sabores / 12 fatias</p>
+            </div>
+            <img src="src/img/pizza_hero.png" alt="">
+            <div class="order__price">
+                <h2>A partir de <br><br> <span class="order__normalPrice">R$115,00</span><br> <span class="order__promotionalPrice">R$100,00</span></h2>
+            </div>
+            <a href="">Comprar</a>
+        </div>
+        <div class="order__card">
+            <div class="order__title">
+                <h1>Pizza G</h1>
+                <p>4 sabores / 12 fatias</p>
+            </div>
+            <img src="src/img/pizza_hero.png" alt="">
+            <div class="order__price">
+                <h2>A partir de <br><br> <span class="order__normalPrice">R$115,00</span><br> <span class="order__promotionalPrice">R$100,00</span></h2>
+            </div>
+            <a href="">Comprar</a>
+        </div>
+    </div>
+</div>
+
+<div class="form-container">
     <select name="sabor" id="primeiroSabor">
-      <option value="" disabled selected>Selecione um Sabor</option>
-      <option value="Pepperoni">Pepperoni (R$12,00)</option>
-      <option value="Frango">Frango (R$12,00)</option>
-      <option value="4 Queijos">4 Queijos (R$12,00)</option>
-      <option value="Calabresa">Calabresa (R$12,00)</option>
-      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+        <option value="" disabled selected>Selecione um Sabor</option>
+        <option value="Pepperoni">Pepperoni (R$12,00)</option>
+        <option value="Frango">Frango (R$12,00)</option>
+        <option value="4 Queijos">4 Queijos (R$12,00)</option>
+        <option value="Calabresa">Calabresa (R$12,00)</option>
+        <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
     </select>
     <select name="sabor" id="segundoSabor">
-      <option value="" disabled selected>Selecione um Sabor</option>
-      <option value="Pepperoni">Pepperoni (R$12,00)</option>
-      <option value="Frango">Frango (R$12,00)</option>
-      <option value="4 Queijos">4 Queijos (R$12,00)</option>
-      <option value="Calabresa">Calabresa (R$12,00)</option>
-      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+        <option value="" disabled selected>Selecione um Sabor</option>
+        <option value="Pepperoni">Pepperoni (R$12,00)</option>
+        <option value="Frango">Frango (R$12,00)</option>
+        <option value="4 Queijos">4 Queijos (R$12,00)</option>
+        <option value="Calabresa">Calabresa (R$12,00)</option>
+        <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
     </select>
     <select name="sabor" id="terceiroSabor">
-      <option value="" disabled selected>Selecione um Sabor</option>
-      <option value="Pepperoni">Pepperoni (R$12,00)</option>
-      <option value="Frango">Frango (R$12,00)</option>
-      <option value="4 Queijos">4 Queijos (R$12,00)</option>
-      <option value="Calabresa">Calabresa (R$12,00)</option>
-      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+        <option value="" disabled selected>Selecione um Sabor</option>
+        <option value="Pepperoni">Pepperoni (R$12,00)</option>
+        <option value="Frango">Frango (R$12,00)</option>
+        <option value="4 Queijos">4 Queijos (R$12,00)</option>
+        <option value="Calabresa">Calabresa (R$12,00)</option>
+        <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
     </select>
     <select name="sabor" id="quartoSabor">
-      <option value="" disabled selected>Selecione um Sabor</option>
-      <option value="Pepperoni">Pepperoni (R$12,00)</option>
-      <option value="Frango">Frango (R$12,00)</option>
-      <option value="4 Queijos">4 Queijos (R$12,00)</option>
-      <option value="Calabresa">Calabresa (R$12,00)</option>
-      <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
+        <option value="" disabled selected>Selecione um Sabor</option>
+        <option value="Pepperoni">Pepperoni (R$12,00)</option>
+        <option value="Frango">Frango (R$12,00)</option>
+        <option value="4 Queijos">4 Queijos (R$12,00)</option>
+        <option value="Calabresa">Calabresa (R$12,00)</option>
+        <option value="Tomate Seco">Tomate Seco (R$12,00)</option>
     </select>
     <form>
-      <div onclick="decrease()">-</div>
-      <input type="text" id="refri" placeholder="Refris" />
-      <div onclick="increase()">+</div>
+        <div onclick="decrease()">-</div>
+        <input type="text" id="refri" placeholder="Refris"/>
+        <div onclick="increase()">+</div>
     </form>
-    <button class="btn" id="calc"><ion-icon name="cart-outline"></ion-icon><span class="title">Realizar Pedido</span></button>
+    <button class="btn" id="calc">
+        <ion-icon name="cart-outline"></ion-icon>
+        <span class="title">Realizar Pedido</span></button>
     <p id="resultado"></p>
-    </div>
-    <script src="./js/main.js"></script>
-  </body>
+</div>
+<script src="./js/main.js"></script>
+</body>
 </html>
