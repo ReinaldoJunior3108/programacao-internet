@@ -1,8 +1,12 @@
 import { useState } from "react";
 
-import { Input } from "@/components/ui/input";
 
 export default function Triangle() {
+  const inputStyleDark =
+      "border border-gray-700 bg-transparent rounded-[8px] p-2 w-[90%]";
+  const buttonStyle =
+      "border border-gray-700 bg-gradient-to-r from-blue-800 to-purple-800 hover:scale-95 hover:bg-gradient-to-l from-blue-800 to-purple-800  transition rounded-[8px] p-4";
+
   const [side1, setSide1] = useState("");
   const [side2, setSide2] = useState("");
   const [side3, setSide3] = useState("");
@@ -63,7 +67,8 @@ export default function Triangle() {
         <div className="flex flex-col items-center justify-center gap-5 mt-10">
           <div className="flex gap-5">
             <label htmlFor="side1">Lado A</label>
-            <Input
+            <input
+                className={inputStyleDark}
               id="side1"
               type="number"
               max="20"
@@ -74,7 +79,8 @@ export default function Triangle() {
           </div>
           <div className=" flex gap-5">
             <label htmlFor="side2">Lado B</label>
-            <Input
+            <input
+                className={inputStyleDark}
               id="side2"
               type="number"
               max="20"
@@ -85,7 +91,8 @@ export default function Triangle() {
           </div>
           <div className=" flex gap-5">
             <label htmlFor="side3">Lado C</label>
-            <Input
+            <input
+                className={inputStyleDark}
               id="side3"
               type="number"
               max="20"
@@ -96,7 +103,7 @@ export default function Triangle() {
           </div>
 
           <button
-            className="bg-black border border-stone-600 p-3 rounded-md"
+            className={buttonStyle}
             onClick={calculateSides}
           >
             Desenhar Triângulo

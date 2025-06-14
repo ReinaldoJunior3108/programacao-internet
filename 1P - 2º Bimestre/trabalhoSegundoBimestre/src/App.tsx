@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Tabs>
-        <TabList className="fixed flex flex-col justify-evenly h-[100%] mt-0">
+        <TabList className="fixed flex flex-col justify-evenly h-[100%] !mt-0">
           <Tab
             className={tabStyle}
             selectedClassName={`border-b-red-600 ${tabStyleSelected}`}

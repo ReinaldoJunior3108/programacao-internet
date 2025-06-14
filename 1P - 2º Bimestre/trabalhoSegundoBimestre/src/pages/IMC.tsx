@@ -1,7 +1,11 @@
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 export default function IMC() {
+  const inputStyleDark =
+    "border border-gray-700 bg-transparent rounded-[8px] p-2 w-[90%]";
+  const buttonStyle =
+    "border border-gray-700 bg-gradient-to-r from-blue-800 to-purple-800 hover:scale-95 hover:bg-gradient-to-l from-blue-800 to-purple-800  transition rounded-[8px] p-4";
+
   const [peso, setPeso] = useState("");
   const [altura, setAltura] = useState("");
   const [resultado, setResultado] = useState("");
@@ -109,7 +113,8 @@ export default function IMC() {
       <div className="flex flex-col justify-center mt-5 gap-5 align-center mx-auto w-[15%]">
         <div className="flex flex-col justify-center align-center gap-5">
           <label htmlFor="altura">Altura</label>
-          <Input
+          <input
+            className={inputStyleDark}
             type="number"
             id="altura"
             placeholder="Altura em CM"
@@ -119,10 +124,9 @@ export default function IMC() {
           />
         </div>
         <div className="flex flex-col align-center gap-3">
-          <label htmlFor="peso" className="font-black">
-            Peso{" "}
-          </label>
-          <Input
+          <label htmlFor="peso">Peso</label>
+          <input
+            className={inputStyleDark}
             type="number"
             id="peso"
             value={peso}
@@ -130,10 +134,7 @@ export default function IMC() {
             onChange={(e) => setPeso(e.target.value)}
           />
         </div>
-        <button
-          className=" mt-5 bg-[#4CAF50] text-white hover:bg-[#66BB6A] border border-stone-600 p-3 rounded-md max-w-[70%] m-auto"
-          onClick={calcularIMC}
-        >
+        <button className={buttonStyle} onClick={calcularIMC}>
           Calcular IMC
         </button>
       </div>
