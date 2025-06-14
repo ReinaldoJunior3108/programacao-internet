@@ -140,23 +140,23 @@ export default function IMC() {
       <div>{resultado && <p>{resultado}</p>}</div>
       <div className="flex gap-5 justify-center mt-5 ">
         <div className="tooltip" data-tip="hello">
-          <img src="src/assets/magreza.png" alt="" className={magreza} />
+          <img src="/magreza.png" alt="" className={magreza} />
           <p>MAGREZA</p>
         </div>
         <div>
-          <img src="src/assets/normal.png" alt="" className={normal} />
+          <img src="/normal.png" alt="" className={normal} />
           <p>NORMAL</p>
         </div>
         <div>
-          <img src="src/assets/sobrePeso.png" alt="" className={sobre} />
+          <img src="/sobrePeso.png" alt="" className={sobre} />
           <p>SOBREPESO</p>
         </div>
         <div>
-          <img src="src/assets/obesidade.png" alt="" className={obesidade} />
+          <img src="/obesidade.png" alt="" className={obesidade} />
           <p>OBESIDADE</p>
         </div>
         <div>
-          <img src="src/assets/obesidade2.png" alt="" className={obesidadeg} />
+          <img src="/obesidade2.png" alt="" className={obesidadeg} />
           <p>OBESIDADE GRAVE</p>
         </div>
       </div>

@@ -4,10 +4,22 @@ export default function Lanchonete() {
     "border border-gray-700 bg-transparent rounded-[8px] p-2 w-[90%]";
   const inputStyleLight =
     "border border-gray-300 bg-stone-100 rounded-[8px] p-2 placeholder:text-gray-700 text-gray-700";
-  const [codigoItem, setCodigoItem] = useState("");
+
+  type ProdutoSeleciona = {
+    codigo: number;
+    produto: string;
+    preco: number;
+  };
+
+  type ItensAdicionados = ProdutoSeleciona & {
+    quantidade: number;
+    total: number;
+  };
+  const [codigoItem, setCodigoItem] = useState<number | "">("");
   const [nomeProduto, setNomeProduto] = useState("");
-  const [produtoSelecionado, setProdutoSelecionado] = useState("");
-  const [itensSelecionados, setItensSelecionados] = useState([]);
+  const [produtoSelecionado, setProdutoSelecionado] = useState<ProdutoSeleciona | null>(null);
+  const [itensSelecionados, setItensSelecionados] = useState<ItensAdicionados[]>([]);
+
   const [quantidade, setQuantidade] = useState(1);
   const cardapio = [
     {
@@ -41,13 +53,10 @@ export default function Lanchonete() {
       preco: 4.5,
     },
   ];
-  const adicionado = [];
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   const handleSelectChange = (e) => {
     const codigo = Number(e.target.value);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     setCodigoItem(codigo);
     const item = cardapio.find((p) => p.codigo === codigo);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -66,16 +75,12 @@ export default function Lanchonete() {
       item = cardapio.find((p) => p.produto.toLowerCase() === entrada);
     }
     if (item) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
       setProdutoSelecionado(item);
       setNomeProduto(item.produto);
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
       setCodigoItem(item.codigo);
     } else {
       alert("Produto nao enontrado");
-      setProdutoSelecionado("");
+      setProdutoSelecionado(null);
       setCodigoItem("");
     }
   };
@@ -84,18 +89,14 @@ export default function Lanchonete() {
     if (!produtoSelecionado || !quantidade) return;
 
     const itemComQuantidade = {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
       ...produtoSelecionado,
       quantidade,
       total: quantidade * produtoSelecionado.preco,
     };
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     setItensSelecionados((prev) => [...prev, itemComQuantidade]);
 
     setNomeProduto("");
-    setProdutoSelecionado("");
+    setProdutoSelecionado(null);
     setCodigoItem("");
     setQuantidade(1);
   };

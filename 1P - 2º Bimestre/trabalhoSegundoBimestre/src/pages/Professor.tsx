@@ -5,13 +5,24 @@ export default function Professor() {
   const buttonStyle =
     "border border-gray-700 bg-gradient-to-r from-blue-800 to-purple-800 hover:scale-95 hover:bg-gradient-to-l from-blue-800 to-purple-800  transition rounded-[8px] p-4";
 
+  type Resultado = {
+    nomeProfessor: string;
+    horasNumber: number;
+    salarioFinal: number;
+  }
   const [nivel, setNivel] = useState("");
   const [nomeProfessor, setNomeProfessor] = useState("");
   const [horas, setHoras] = useState("");
-  const [resultado, setResultado] = useState([]);
+  const [resultado, setResultado] = useState<Resultado[]>([]);
+
 
   const calculoSalario = () => {
+
     const horasNumber = Number(horas);
+    if(!nomeProfessor || horasNumber <= 0 || !nivel) {
+      alert("preencha os dados corretamente")
+      return;
+    }
     let niveis = 0;
     switch (nivel) {
       case "N1":
