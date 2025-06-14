@@ -14,6 +14,9 @@ function App() {
   const tabStyleSelected = "bg-transparent border-b-2 p-2 transition";
   return (
     <>
+      <div className="fixed bottom-0 right-0 font-light text-gray-400 text-[12px]">
+        <p>Desenvolvido por: Reinaldo Junior - 60006727</p>
+      </div>
       <Tabs>
         <TabList className="fixed flex flex-col justify-evenly h-[100%] !mt-0">
           <Tab
